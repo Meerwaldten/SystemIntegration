@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No modules</title>
+</head>
+<body>
+
+    <!--
+        Rækkefølge er vigtigt her. 
+        Hvis rækkefølgen var omvendt, ville siden crashe og ikke virke.
+        Ved at have myModule først, så har efterfølgende scripts adgang til det som ligger i den fil.
+    -->
+    <script src="./myModule.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

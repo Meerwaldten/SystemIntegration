@@ -1,0 +1,9 @@
+<me>
+    <name>Mikkel</name>
+    <age>29</age>
+    <hobbies>
+        <hobby>gaming</hobby>
+        <hobby>coding</hobby>
+    </hobbies>
+    <residence>København</residence>
+</me>
