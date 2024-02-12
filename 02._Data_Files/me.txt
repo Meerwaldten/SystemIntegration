@@ -1,0 +1,6 @@
+name: Mikkel
+age: 29
+hobbies:
+  - gaming
+  - coding
+residence: København
