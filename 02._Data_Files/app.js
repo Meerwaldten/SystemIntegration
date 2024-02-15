@@ -24,7 +24,7 @@ app.get('/xml', (req, res) => {
 })
 
 app.get('/yaml', (req, res) =>{
-    const yamlData = readAndParseYAML();
+    const yamlData = readAndParseYAML(); 
     res.send({ data: yamlData });
 })
 
