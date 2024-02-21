@@ -56,3 +56,10 @@ with open(yaml_path, 'r') as yamlfile:
 
 # Print the parsed YAML data
 print("Data parsed from YAML-File:", yaml_data)
+
+
+
+def read_yaml(yaml_path):
+    with open(yaml_path, 'r') as yamlfile:
+        yaml_data = yaml.safe_load(yamlfile)
+    return yaml_data
