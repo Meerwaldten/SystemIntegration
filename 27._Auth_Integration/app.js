@@ -1,5 +1,8 @@
 import express from 'express';
-import { auth, requiresAuth } from 'express-openid-connect';
+//import { auth } from 'express-openid-connect';
+import pkg from "express-openid-connect"
+
+const { auth, requiresAuth } = pkg
 
 const app = express();
 
@@ -12,18 +15,15 @@ const config = {
   issuerBaseURL: 'https://dev-827cnykglwzed0fq.us.auth0.com'
 };
 
-// auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
-// req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
 app.get('/profile', requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user));
-  });
-
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 const PORT = process.env.PORT | 8080;
 
